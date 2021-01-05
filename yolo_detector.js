@@ -1,6 +1,7 @@
 let video;
 let yolo;
 let status;
+let synth = window.speechSynthesis;
 let objects = [];
 
 function setup() {
@@ -24,6 +25,7 @@ function draw() {
         textSize(50);
         text(objects[i].className, objects[i].x * width, objects[i].y * height - 5);
         noFill();
+        synth.speak(new SpeechSynthesisUtterance(objects[i].className))
         strokeWeight(4);
         stroke(0, 0, 255);
         rect(objects[i].x * width, objects[i].y * height, objects[i].w * width, objects[i].h * height);
