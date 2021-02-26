@@ -5,7 +5,7 @@ let synth = window.speechSynthesis;
 let objects = [];
 
 function setup() {
-    createCanvas(1080, 1920);
+    createCanvas(900, 600);
     video = createCapture(VIDEO);
     video.size(1080, 1920);
 
